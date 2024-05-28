@@ -4,12 +4,13 @@ NULLABLE = {"blank": True, "null": True}
 
 
 class Category(models.Model):
+    objects = None
     name = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.CharField(max_length=150, verbose_name='Описание')
 
     def __str__(self):
         # Строковое отображение объекта
-        return f'{self.name} {self.description}'
+        return f'{self.name}'
 
     class Meta:
         verbose_name = 'категория'  # Настройка для наименования одного объекта
@@ -17,6 +18,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    objects = None
     name = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.CharField(max_length=200, verbose_name='Описание')
     image = models.ImageField(max_length=150, verbose_name='Изображение', **NULLABLE)
