@@ -1,0 +1,117 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Ноутбуки",
+        "description": "Портативные решения для работы и игр"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Бытовая техника",
+        "description": "Разнообразная бытовая техника для упрощения жизни"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+        "name": "Посуда",
+        "description": "Посуда и приспособления для готовки на все случаи жизни"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Ноутбук игровой MSI Katana",
+        "description": "отличный игровой ноутбук для гейминга где угодно",
+        "image": "",
+        "category": 1,
+        "price": "155 000",
+        "created_at": "2024-05-28T13:04:38Z",
+        "updated_at": "2024-05-28T13:04:39Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Ноутбук игровой Thunderobot 911 Plus G3 Pro",
+        "description": "отличный игровой ноутбук",
+        "image": "",
+        "category": 1,
+        "price": "196000",
+        "created_at": "2024-05-28T13:05:05Z",
+        "updated_at": "2024-05-28T13:05:06Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Ноутбук игровой ASUS TUF Gaming A15",
+        "description": "ноутбук для домашнего  гейминга",
+        "image": "",
+        "category": 1,
+        "price": "118000",
+        "created_at": "2024-05-28T13:05:32Z",
+        "updated_at": "2024-05-28T13:05:33Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Пылесос ручной (handstick) Tefal X-Force",
+        "description": "Легкий ручной пылесос",
+        "image": "",
+        "category": 2,
+        "price": "76000",
+        "created_at": "2024-05-28T13:05:55Z",
+        "updated_at": "2024-05-28T13:05:56Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Измельчитель электрический Kitfort КТ-3024",
+        "description": "Совместим c Яндекс Станцией",
+        "image": "",
+        "category": 2,
+        "price": "96000",
+        "created_at": "2024-05-28T13:06:20Z",
+        "updated_at": "2024-05-28T13:06:22Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Форма для выпеканияTefal Delibake",
+        "description": "диаметр 19см",
+        "image": "",
+        "category": 3,
+        "price": "899",
+        "created_at": "2024-05-28T13:06:41Z",
+        "updated_at": "2024-05-28T13:06:42Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Щипцы кухонные Tefal Bienvenue",
+        "description": "деревянная рукоять",
+        "image": "",
+        "category": 3,
+        "price": "799",
+        "created_at": "2024-05-28T13:07:04Z",
+        "updated_at": "2024-05-28T13:07:05Z"
+    }
+}
+]
