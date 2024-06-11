@@ -6,7 +6,7 @@ from .models import Blog
 
 class BlogPostListView(ListView):
     model = Blog
-    template_name = 'blog/blogpost_list.html'
+    template_name = 'blog/blog_list.html'
     context_object_name = 'blog_posts'
 
     def get_queryset(self):
@@ -15,7 +15,7 @@ class BlogPostListView(ListView):
 
 class BlogPostDetailView(DetailView):
     model = Blog
-    template_name = 'blog/blogpost_detail.html'
+    template_name = 'blog/blog_detail.html'
     queryset = Blog.objects.filter(is_published=True)
 
     def get_object(self, queryset=None):
@@ -27,7 +27,7 @@ class BlogPostDetailView(DetailView):
 
 class BlogPostCreateView(CreateView):
     model = Blog
-    template_name = 'blog/blogpost_form.html'
+    template_name = 'blog/blog_form.html'
     fields = ['title', 'content', 'preview_image', 'is_published']
     success_url = reverse_lazy('blog:list')
 
@@ -40,7 +40,7 @@ class BlogPostCreateView(CreateView):
 
 class BlogPostUpdateView(UpdateView):
     model = Blog
-    template_name = 'blog/blogpost_form.html'
+    template_name = 'blog/blog_form.html'
     fields = ['title', 'content', 'preview_image', 'is_published']
     success_url = reverse_lazy('blog:list')
 
@@ -56,5 +56,5 @@ class BlogPostUpdateView(UpdateView):
 
 class BlogPostDeleteView(DeleteView):
     model = Blog
-    template_name = 'blog/blogpost_confirm_delete.html'
+    template_name = 'blog/blog_confirm_delete.html'
     success_url = reverse_lazy('blog:list')
