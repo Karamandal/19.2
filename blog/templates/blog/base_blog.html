@@ -128,6 +128,17 @@
     </symbol>
 </svg>
 
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-black border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Skystore</h5>
+    <nav class="ms-5">
+        <a class="p-2 btn btn-outline-primary" href="/">Каталог</a>
+        <a class="p-2 btn btn-outline-primary" href="/contacts/">Контакты</a>
+        <a class="p-2 btn btn-outline-primary" href="/products/">Продукты</a>
+        <a class="p-2 btn btn-outline-primary" href="/blog/">Блог</a>
+    </nav>
+</div>
+
 <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -182,7 +193,6 @@
 
 
 <header data-bs-theme="dark">
-{% include 'includes/inc_menu.html' %}
 </header>
 
 <main>
@@ -190,11 +200,12 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Продукты</h1>
-                <p class="lead text-body-secondary">САМЫЕ ВКУСНЫЕ И СВЕЖИЕ ОВОЩИ И ФРУКТЫ</p>
+                <h1 class="fw-light">БЛОГ</h1>
+                <p class="lead text-body-secondary">САМЫЕ НОВЫЕ СТАТЬИ</p>
                 <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                    <a href="#" class="btn btn-primary my-2">Список публикаций</a>
+                    <a href="/create/" class="btn btn-secondary my-2">Secondary action</a>
+                    <a class="p-2 btn btn-outline-primary" href="/blog/">Блог</a>
                 </p>
             </div>
         </div>
@@ -202,8 +213,7 @@
 
 
 
-{% block content %}
-{% endblock  %}
+
 </main>
 
 <footer class="text-body-secondary py-5">
@@ -212,7 +222,6 @@
             <a href="#">Back to top</a>
         </p>
         <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
                 href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
     </div>
 </footer>
