@@ -203,9 +203,7 @@
                 <h1 class="fw-light">БЛОГ</h1>
                 <p class="lead text-body-secondary">САМЫЕ НОВЫЕ СТАТЬИ</p>
                 <p>
-                    <a href="#" class="btn btn-primary my-2">Список публикаций</a>
-                    <a href="/create/" class="btn btn-secondary my-2">Secondary action</a>
-                    <a class="p-2 btn btn-outline-primary" href="/blog/">Блог</a>
+                    <a href="{% url 'blog:create' %}" class="btn btn-primary my-2">Создать публикацию</a>
                 </p>
             </div>
         </div>
