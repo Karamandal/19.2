@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, ListView, DetailView
-from catalog.models import Product
+from catalog.models import Product, Version
 
 
 class HomeView(TemplateView):
@@ -21,6 +21,16 @@ class ProductsListView(ListView):
     model = Product
     template_name = 'product_list.html'
     context_object_name = 'products'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        products = context['products']
+        product_version = {}
+        for product in products:
+            active_version = Version.objects.filter(product=product, is_active=True).first()
+            product_version[product.id] = active_version
+        context['product_version'] = product_version
+        return context
 
 
 class ProductsDetailView(DetailView):
