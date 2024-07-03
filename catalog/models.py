@@ -1,5 +1,7 @@
 from django.db import models
 
+from users.models import User
+
 NULLABLE = {"blank": True, "null": True}
 
 
@@ -26,6 +28,7 @@ class Product(models.Model):
     price = models.CharField(max_length=150, verbose_name='Цена')
     created_at = models.DateTimeField(verbose_name='Дата создания')
     updated_at = models.DateTimeField(verbose_name='Дата последнего изменения')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         # Строковое отображение объекта
@@ -42,5 +45,6 @@ class Version(models.Model):
     version_number = models.CharField(max_length=150, verbose_name='Версия')
     version_name = models.CharField(max_length=150)
     is_active = models.BooleanField(default=False)
+
 
 

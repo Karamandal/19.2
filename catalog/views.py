@@ -8,7 +8,7 @@ class HomeView(TemplateView):
     template_name = 'home.html'
 
 
-class ContactsView(TemplateView):
+class ContactsView(LoginRequiredMixin, TemplateView):
     template_name = 'contacts.html'
 
     def form_valid(self, request, *args, **kwargs):
@@ -19,7 +19,7 @@ class ContactsView(TemplateView):
         return super().get(request, *args, **kwargs)
 
 
-class ProductsListView(ListView):
+class ProductsListView(LoginRequiredMixin, ListView):
     model = Product
     template_name = 'product_list.html'
     context_object_name = 'products'
@@ -35,7 +35,7 @@ class ProductsListView(ListView):
         return context
 
 
-class ProductsDetailView(DetailView):
+class ProductsDetailView(LoginRequiredMixin, DetailView):
     model = Product
     template_name = 'products_detail.html'
     context_object_name = 'product'
