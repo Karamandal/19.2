@@ -28,7 +28,7 @@ class Product(models.Model):
     price = models.CharField(max_length=150, verbose_name='Цена')
     created_at = models.DateTimeField(verbose_name='Дата создания')
     updated_at = models.DateTimeField(verbose_name='Дата последнего изменения')
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE)
 
     def __str__(self):
         # Строковое отображение объекта
